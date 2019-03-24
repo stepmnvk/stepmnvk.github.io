@@ -1,0 +1,11 @@
+User-agent: *
+Disallow: /super/
+Disallow: /assets/components/
+Disallow: /core/
+Disallow: /connectors/
+Disallow: /index.php
+Disallow: /index.html
+Disallow: /index
+Disallow: *?
+Host: stepmnvk.net.ua
+Sitemap: http://stepmnvk.net.ua/sitemap.xml
