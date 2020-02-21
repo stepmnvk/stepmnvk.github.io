@@ -8492,13 +8492,11 @@
 
                     <SCRIPT type=text/javascript>
                         // Array ofmonth Names
-                        var monthNames=new Array( "Січня"
-                        ,"Лютого","Березня", "Квітня"
-                        ,"Травня","Червня","Липня","Серпня","Вересня","Жовтня","Листопада","Грудня");
+                        var monthNames=new Array( "Січня","Лютого","Березня", "Квітня","Травня","Червня","Липня","Серпня","Вересня","Жовтня","Листопада","Грудня");
                         var now=new Date();
                         thisYear=now.getYear(); 
-                        if(thisYear < 1900) {thisYear +=1900}; // corrections if Y2K
-                        display problem document.write(now.getDate() + " " + monthNames[now.getMonth()] + ", " + thisYear + "р." ); 
+                        if(thisYear < 1900) {thisYear +=1900}; // corrections if Y2K  display problem 
+                        document.write(now.getDate() + " " + monthNames[now.getMonth()] + ", " + thisYear + "р." ); 
                     </SCRIPT>
                 </div>
             </div>
