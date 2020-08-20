@@ -1,50 +1,78 @@
-
-.navbar > .container .navbar-brand, .navbar > .container-fluid .navbar-brand {
-	margin-left: -4px;
-	margin-top: -13px;
+.navbar > .container .navbar-brand,
+.navbar > .container-fluid .navbar-brand {
+  margin-left: -4px;
+  margin-top: -13px;
 }
 .navbar-brand > img {
-	margin-top: -27px;
-	margin-left: -9px;
-	margin-right: -12px;
-	position: relative;
-	z-index: 4;
+  margin-top: -27px;
+  margin-left: -9px;
+  margin-right: -12px;
+  position: relative;
+  z-index: 4;
 }
-.navbar-brand a, a:hover, a:focus {
-	color: #f00;
-	outline: none;
+.navbar-brand a,
+a:hover,
+a:focus {
+  color: #f00;
+  outline: none;
 }
 .navbar-nav > li > a {
-	padding-top: 16px;
-	padding-bottom: 16px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
-..navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
-	color: #fff;
-	background-color: transparent;
+.navbar-inverse .navbar-nav > .active > a,
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-color: transparent;
 }
-.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
-	color: #fff;
-	background-color: transparent;
-	text-shadow: #fff 0 0 4px;
-	outline: none;
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  color: #fff;
+  background-color: transparent;
+  text-shadow: #fff 0 0 4px;
+  outline: none;
 }
- .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
-	color: #fff;
-	background-color: transparent;
+.navbar-inverse .navbar-nav > .active > a:hover,
+.navbar-inverse .navbar-nav > .active > a:focus {
+  color: #fff;
+  background-color: transparent;
 }
 .navbar-inverse .navbar-nav > .active > a {
-	background-color: transparent;
-	outline: none;
+  background-color: transparent;
+  outline: none;
 }
 .navbar {
-	margin-bottom: 0px;
+  margin-bottom: 0px;
 }
 .navbar-header h2 {
-	margin-top: 11px;
-	margin-left: 30px;
-	color: #ffffff;
-	float: left;
+  margin-top: 11px;
+  margin-left: 30px;
+  color: #ffffff;
+  float: left;
 }
 .slider .carousel-caption {
-	position: relative;
+  position: relative;
+}
+.distance {
+  color: white;
+  text-shadow: 0px 0px 0px #da4a26;
+  animation-name: distance;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes distance {
+  from {
+    text-shadow: 0px 0px 0px #da4a26;
+    color: white;
+  }
+  50% {
+    text-shadow: 0px 0px 3px #da4a26;
+    color: red;
+  }
+  to {
+    text-shadow: 0px 0px 0px #da4a26;
+    color: white;
+  }
 }
