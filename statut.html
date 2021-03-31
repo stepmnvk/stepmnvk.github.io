@@ -141,32 +141,151 @@
                     <div class="content">
                         <h2 style="margin-bottom: 35px">Статут</h2>
                         <style>
-                        .fig>.album {
-                            width: 300px;
-                            height: auto;
-                            border: 1px solid black;
-                        }
+                        	.docs-images {
+									display: flex;
+									flex-wrap: wrap;
+									align-items: center;
+									width: auto;
+									background-color: transparent;
+								}
+
+								.docs-images>.item {
+									box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+									background-size: contain;
+									background-repeat: no-repeat;
+									background-position: center center;
+									width: 290px;
+									height: 400px;
+                                    margin: 15px;
+									background-color: transparent;
+								}
+                                #doc-scan {
+									visibility: hidden;
+									transition: height, width 0.5s;
+									background-color: rgba(0, 0, 0, 0.70);
+									position: fixed;
+									height: 0px;
+									width: 0px;
+									margin: auto;
+									top: 0;
+									left: 0;
+									right: 0;
+									z-index: 1;
+								}
+
+								#doc-zoom {
+									background-repeat: no-repeat;
+									background-size: contain;
+									background-position: center center;
+									height: 100vh;
+									width: 90%;
+									position: absolute;
+									top: 0;
+									left: 0;
+									right: 0;
+									margin: auto;
+								}
+                                .navbar-brand>img {
+									z-index: 3;
+								}
+
+								.left_side_inner {
+									z-index: 2;
+								}
+                                .next {
+									position: absolute;
+									right: 0;
+									top: 0;
+								}
+
+								.prev,
+								.next {
+									background-color: #673ab779;
+									flex-shrink: 1;
+									width: 3%;
+									height: 100vh;
+									text-align: center;
+									color: white;
+									font-size: 2em;
+								}
+
+								.prev>i {
+									position: absolute;
+									top: 50%;
+									left: 0.2em;
+									z-index: 10;
+								}
+
+								.next>i {
+									position: absolute;
+									top: 50%;
+									right: 0.2em;
+								}
                         </style>
                         <article>
-                            <div class="fig">
-                                <figure class="album"><a href="assets/img/statut/10001.jpg"><img src="assets/img/statut/small/10001.jpg" alt="Photo" /></a></figure>
-                                <figure class="album"><a href="assets/img/statut/10002.jpg"><img src="assets/img/statut/small/10002.jpg" alt="Photo" /></a></figure>
-                                <figure class="album"><a href="assets/img/statut/10004.jpg"><img src="assets/img/statut/small/10004.jpg" alt="Photo" /></a></figure>
-                                <figure class="album"><a href="assets/img/statut/10005.jpg"><img src="assets/img/statut/small/10005.jpg" alt="Photo" /></a></figure>
-                                <figure class="album"><a href="assets/img/statut/10006.jpg"><img src="assets/img/statut/small/10006.jpg" alt="Photo" /></a></figure>
-                                <figure class="album"><a href="assets/img/statut/10007.jpg"><img src="assets/img/statut/small/10007.jpg" alt="Photo" /></a></figure>
-                                <figure class="album"><a href="assets/img/statut/10008.jpg"><img src="assets/img/statut/small/10008.jpg" alt="Photo" /></a></figure>
-                                <figure class="album"><a href="assets/img/statut/10009.jpg"><img src="assets/img/statut/small/10009.jpg" alt="Photo" /></a></figure>
-                                <figure class="album"><a href="assets/img/statut/10010.jpg"><img src="assets/img/statut/small/10010.jpg" alt="Photo" /></a></figure>
-                                <figure class="album"><a href="assets/img/statut/10011.jpg"><img src="assets/img/statut/small/10011.jpg" alt="Photo" /></a></figure>
-                                <figure class="album"><a href="assets/img/statut/10012.jpg"><img src="assets/img/statut/small/10012.jpg" alt="Photo" /></a></figure>
-                                <figure class="album"><a href="assets/img/statut/10013.jpg"><img src="assets/img/statut/small/10013.jpg" alt="Photo" /></a></figure>
-                                <figure class="album"><a href="assets/img/statut/10014.jpg"><img src="assets/img/statut/small/10014.jpg" alt="Photo" /></a></figure>
-                                <figure class="album"><a href="assets/img/statut/10015.jpg"><img src="assets/img/statut/small/10015.jpg" alt="Photo" /></a></figure>
-                                <figure class="album"><a href="assets/img/statut/10016.jpg"><img src="assets/img/statut/small/10016.jpg" alt="Photo" /></a></figure>
-                                <figure class="album"><a href="assets/img/statut/10017.jpg"><img src="assets/img/statut/small/10017.jpg" alt="Photo" /></a></figure>
-                                <figure class="album"><a href="assets/img/statut/10018.jpg"><img src="assets/img/statut/small/10018.jpg" alt="Photo" /></a></figure>
-                                <figure class="album"><a href="assets/img/statut/10019.jpg"><img src="assets/img/statut/small/10019.jpg" alt="Photo" /></a></figure>
+
+							<div id="doc-scan">
+								<div class="prev" onclick="prev()"><i class="fa fa-chevron-left" aria-hidden="true"></i>
+								</div>
+								<div id="doc-zoom" onclick="zoomOut()"></div>
+								<div class="next" onclick="next()"><i class="fa fa-chevron-right"
+										aria-hidden="true"></i></div>
+							</div>
+                            <div class="docs-images">
+                                <div onclick="zoom(this)" class="item"
+                                    style="background-image: url('assets/img/statut/statut1.jpg');">
+                                </div>
+                                <div onclick="zoom(this)" class="item"
+                                style="background-image: url('assets/img/statut/statut2.jpg');">
+                            </div>
+                            <div onclick="zoom(this)" class="item"
+                                    style="background-image: url('assets/img/statut/statut3.jpg');">
+                                </div>
+                                <div onclick="zoom(this)" class="item"
+                                    style="background-image: url('assets/img/statut/statut4.jpg');">
+                                </div>
+                                <div onclick="zoom(this)" class="item"
+                                    style="background-image: url('assets/img/statut/statut5.jpg');">
+                                </div>
+                                <div onclick="zoom(this)" class="item"
+                                    style="background-image: url('assets/img/statut/statut6.jpg');">
+                                </div>
+                                <div onclick="zoom(this)" class="item"
+                                    style="background-image: url('assets/img/statut/statut7.jpg');">
+                                </div>
+                                <div onclick="zoom(this)" class="item"
+                                    style="background-image: url('assets/img/statut/statut8.jpg');">
+                                </div>
+                                <div onclick="zoom(this)" class="item"
+                                    style="background-image: url('assets/img/statut/statut9.jpg');">
+                                </div>
+                                <div onclick="zoom(this)" class="item"
+                                    style="background-image: url('assets/img/statut/statut10.jpg');">
+                                </div>
+                                <div onclick="zoom(this)" class="item"
+                                    style="background-image: url('assets/img/statut/statut11.jpg');">
+                                </div>
+                                <div onclick="zoom(this)" class="item"
+                                    style="background-image: url('assets/img/statut/statut12.jpg');">
+                                </div>
+                                <div onclick="zoom(this)" class="item"
+                                    style="background-image: url('assets/img/statut/statut13.jpg');">
+                                </div>
+                                <div onclick="zoom(this)" class="item"
+                                    style="background-image: url('assets/img/statut/statut14.jpg');">
+                                </div>
+                                <div onclick="zoom(this)" class="item"
+                                    style="background-image: url('assets/img/statut/statut15.jpg');">
+                                </div>
+                                <div onclick="zoom(this)" class="item"
+                                    style="background-image: url('assets/img/statut/statut16.jpg');">
+                                </div>
+                                <div onclick="zoom(this)" class="item"
+                                    style="background-image: url('assets/img/statut/statut17.jpg');">
+                                </div>
+                                <div onclick="zoom(this)" class="item"
+                                    style="background-image: url('assets/img/statut/statut18.jpg');">
+                                </div>
                             </div>
                         </article>
                         
@@ -366,7 +485,60 @@
                         </div>
                         
                     </div>
-                    
+                    <script>
+                        let image = {}
+
+function getFullSizeImg(img) {
+    const imageSrc = img.style.backgroundImage
+    const fullSizeImgUrl = imageSrc.slice(0, imageSrc.lastIndexOf('/', imageSrc.length) + 1) + "full_size/" + (imageSrc.slice(imageSrc.lastIndexOf("/", imageSrc.length) + 1))
+    return fullSizeImgUrl
+}
+function prev() {
+    const docZoom = document.querySelector('#doc-zoom')
+    const prevImage = image.previousElementSibling
+    if (prevImage === null) {
+        zoomOut()
+    } else {
+        const fullSizeImgUrl = getFullSizeImg(prevImage)
+        docZoom.style.backgroundImage = fullSizeImgUrl
+        image = prevImage
+    }
+
+}
+function next() {
+    const docZoom = document.querySelector('#doc-zoom')
+    const nextImage = image.nextElementSibling
+    if (nextImage === null) {
+        zoomOut()
+    } else {
+        const fullSizeImgUrl = getFullSizeImg(nextImage)
+        docZoom.style.backgroundImage = fullSizeImgUrl
+        image = nextImage
+    }
+
+}
+
+function zoomOut() {
+    const docZoom = document.querySelector('#doc-zoom')
+    const docScan = document.querySelector('#doc-scan')
+    docZoom.style.backgroundImage = ""
+    docScan.style.visibility = "hidden"
+    docScan.style.height = "0px"
+    docScan.style.width = "0px"
+}
+
+function zoom(e) {
+    image = e
+    const imageSrc = e.style.backgroundImage
+    const docScan = document.querySelector('#doc-scan')
+    const docZoom = document.querySelector('#doc-zoom')
+    const fullSizeImgUrl = getFullSizeImg(e)
+    docZoom.style.backgroundImage = fullSizeImgUrl
+    docScan.style.width = "90vw";
+    docScan.style.height = "100vh"
+    docScan.style.visibility = "visible"
+}
+                    </script>
                     
                     
                     <script>
