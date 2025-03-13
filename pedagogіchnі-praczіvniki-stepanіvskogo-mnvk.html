@@ -834,6 +834,7 @@
                           >
                         </li>
                       </ul>
+                      <h4>Нагороди:</h4>
                     </div>
                   </div>
                 </div>
@@ -1414,6 +1415,7 @@
                           >
                         </li>
                       </ul>
+                      <h4>Нагороди:</h4>
                     </div>
                   </div>
                 </div>
@@ -1457,7 +1459,10 @@
                           <div class=""></div>
                         </span>
                       </li>
-                      <!-- <li>Педагогічне звання: <span class="bolder">старший вчитель</span></li> -->
+                      <li>
+                        Педагогічне звання:
+                        <!-- <span class="bolder">старший вчитель</span> -->
+                      </li>
                     </ul>
                     <a class="portfolio-button" onclick="portfolio(this)"
                       >Портфоліо
@@ -1648,6 +1653,7 @@
 											<li>Робота в творчих, динамічних групах:
 											</li> -->
                       </ul>
+                      <h4>Нагороди:</h4>
                     </div>
                   </div>
                 </div>
@@ -1683,12 +1689,11 @@
                         Педагогічний стаж роботи:<span class="bolder"> 4</span>
                       </li>
                       <li>
-                        Кваліфікаційна категорія:
-                        <span class="bolder">
-                          <div class=""></div>
+                        Кваліфікаційна категорія:<span class="bolder">
+                          Спеціаліст
                         </span>
                       </li>
-                      <li>Педагогічне звання: <span class="bolder"></span></li>
+                      <!-- <li>Педагогічне звання: <span class="bolder"></span></li> -->
                     </ul>
                     <a class="portfolio-button" onclick="portfolio(this)"
                       >Портфоліо
@@ -1864,6 +1869,7 @@
 
                         <!-- <li>Робота в творчих, динамічних групах:</li> -->
                       </ul>
+                      <h4>Нагороди:</h4>
                     </div>
                   </div>
                 </div>
@@ -2099,11 +2105,26 @@
                               background-image: url('assets/gallery/collective_docs/Levenets/cert6.png');
                             "
                           ></div>
-                        </div>
 
+                          <div
+                            onclick="zoom(this)"
+                            class="item"
+                            style="
+                              background-image: url('assets/gallery/collective_docs/Levenets/cert8.jpg');
+                            "
+                          ></div>
+                          <div
+                            onclick="zoom(this)"
+                            class="item"
+                            style="
+                              background-image: url('assets/gallery/collective_docs/Levenets/cert9.jpg');
+                            "
+                          ></div>
+                        </div>
                         <!-- <li>Робота в творчих, динамічних групах:
 											</li> -->
                       </ul>
+                      <h4>Нагороди:</h4>
                     </div>
                   </div>
                 </div>
@@ -2340,6 +2361,7 @@
                         <!-- <li>Робота в творчих, динамічних групах:
 											</li> -->
                       </ul>
+                      <h4>Нагороди:</h4>
                     </div>
                   </div>
                 </div>
@@ -2552,6 +2574,7 @@
 
                         <!-- <li>Робота в творчих, динамічних групах:</li> -->
                       </ul>
+                      <h4>Нагороди:</h4>
                     </div>
                   </div>
                 </div>
@@ -2785,6 +2808,7 @@
 											<li>Робота в творчих, динамічних групах:
 											</li> -->
                       </ul>
+                      <h4>Нагороди:</h4>
                     </div>
                   </div>
                 </div>
@@ -2999,6 +3023,7 @@
 											<li>Робота в творчих, динамічних групах:
 											</li> -->
                       </ul>
+                      <h4>Нагороди:</h4>
                     </div>
                   </div>
                 </div>
@@ -3188,6 +3213,7 @@
 											<li>Робота в творчих, динамічних групах:
 											</li> -->
                       </ul>
+                      <h4>Нагороди:</h4>
                     </div>
                   </div>
                 </div>
@@ -3421,6 +3447,7 @@
                         <!-- <li>Робота в творчих, динамічних групах:
 											</li> -->
                       </ul>
+                      <h4>Нагороди:</h4>
                     </div>
                   </div>
                 </div>
@@ -3963,9 +3990,9 @@
           const chevron = e.querySelector('i');
           if (portfolio.style.maxHeight === '0px') {
             portfolio.style.transition = 'max-height 3s';
-            portfolio.style.maxHeight = '2000px';
+            portfolio.style.maxHeight = '2500px';
             chevron.style.transform = 'rotate(-180deg)';
-          } else if (portfolio.style.maxHeight === '2000px') {
+          } else if (portfolio.style.maxHeight === '2500px') {
             portfolio.style.transition = 'max-height 1s';
             portfolio.style.maxHeight = '0px';
             chevron.style.transform = 'rotate(0deg)';
